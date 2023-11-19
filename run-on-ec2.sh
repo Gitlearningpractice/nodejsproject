@@ -1,1 +1,1 @@
-node app.s
+node app.js

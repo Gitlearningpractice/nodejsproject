@@ -1,1 +1,1 @@
-docker build -t my-node-app .
+sudo docker build -t my-node-app .

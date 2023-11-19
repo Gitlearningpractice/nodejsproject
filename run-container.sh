@@ -1,1 +1,1 @@
-docker run -p 3000:3000 -d my-node-app
+sudo docker run -p 3000:3000 -d my-node-app

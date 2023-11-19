@@ -1,0 +1,22 @@
+---
+- name: Install Node.js
+  hosts: your_target_hosts
+  become: yes  # To run tasks with sudo
+
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+      become: yes
+
+    - name: Install Node.js and npm
+      apt:
+        name: nodejs
+        state: present
+      become: yes
+
+    - name: Install build-essential for npm packages with native addons
+      apt:
+        name: build-essential
+        state: present
+      become: yes

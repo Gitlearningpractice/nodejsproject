@@ -1,6 +1,6 @@
 ---
 - name: Install Node.js
-  hosts: your_target_hosts
+  hosts: localhost
   become: yes  # To run tasks with sudo
 
   tasks:

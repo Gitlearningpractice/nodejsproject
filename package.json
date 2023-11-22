@@ -4,7 +4,7 @@
   "description": "nodejsproject",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "echo \"scripts start\"",
     "build": "echo \"scripts build\"",
     "eject": "echo \"scripts eject\""
@@ -12,13 +12,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-}
-if (response) {
-    let a;
-    try {
-        a = JSON.parse(response);
-    } catch (e) {
-        return console.error(e); // error in the above string (in this case, yes)!
-    }
-    // if no error, we can now keep using "a"
 }

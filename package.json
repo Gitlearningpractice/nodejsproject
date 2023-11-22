@@ -5,6 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"scripts start\"",
+    "build": "echo \"scripts build\"",
+    "eject": "echo \"scripts eject\""
   },
   "keywords": [],
   "author": "",

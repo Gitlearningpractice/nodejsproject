@@ -16,7 +16,7 @@ pipeline {
             steps {
                 git 'https://github.com/Gitlearningpractice/nodejsproject.git'
                     // Check out your source code from version control (e.g., Git)
-                   checkout scm
+                
                 }
             }
         }

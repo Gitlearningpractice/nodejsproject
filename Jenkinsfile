@@ -24,9 +24,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Copy server.js into the Docker image
-                    sh 'cp server.js .'
-                    // Build the Docker image
+                   // Build the Docker image
                     docker.build("${DOCKER_IMAGE}:${BUILD_NUMBER}", '.')
                 }
             }
@@ -37,6 +35,7 @@ pipeline {
                 script {
                     // Deploy the container
                     docker.image("${DOCKER_IMAGE}:${BUILD_NUMBER}").withRun("--name ${CONTAINER_NAME} -p ${PORT_MAPPING}")
+                    dockerImage.push()  
                 }
             }
         }

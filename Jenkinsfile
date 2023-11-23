@@ -6,17 +6,17 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = 'your-docker-image-name'
-        CONTAINER_NAME = 'web-server-container'
+        DOCKER_IMAGE = 'nodejs-app'
+        CONTAINER_NAME = 'nodejs-container'
         PORT_MAPPING = '8080:80'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                script {
+                git([url: https://github.com/Gitlearningpractice/nodejsproject.git branch: 'main'])
                     // Check out your source code from version control (e.g., Git)
-                    checkout scm
+                   checkout scm
                 }
             }
         }

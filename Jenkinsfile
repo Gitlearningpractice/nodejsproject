@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git([url: https://github.com/Gitlearningpractice/nodejsproject.git branch: 'main'])
+                git([url: 'https://github.com/Gitlearningpractice/nodejsproject.git' branch: 'main'])
                     // Check out your source code from version control (e.g., Git)
                    checkout scm
                 }

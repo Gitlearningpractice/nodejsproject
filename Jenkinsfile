@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Building Docker Image') {
             steps {
                 script {
                    // Build the Docker image
@@ -30,12 +30,12 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deploying Docker Image') {
             steps {
                 script {
                     // Deploy the container
                     docker.image("${DOCKER_IMAGE}:${BUILD_NUMBER}").withRun("--name ${CONTAINER_NAME} -p ${PORT_MAPPING}")
-                    dockerImage.push()  
+                    
                 }
             }
         }

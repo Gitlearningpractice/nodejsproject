@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = 'nodejs-app'
-        CONTAINER_NAME = 'nodejs-container'
+        DOCKER_IMAGE = 'nodejs_app'
+        CONTAINER_NAME = 'nodejs_container'
         PORT_MAPPING = '8080:80'
     }
     

@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Cloning our Git:') {
             steps {
-                git 'https://github.com/Gitlearningpractice/nodejsproject.git'
+                git clone 'https://github.com/Gitlearningpractice/nodejsproject.git'
                     // Check out your source code from version control (e.g., Git)
                 
                 }

@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the container
-                    docker.image("${DOCKER_IMAGE}:${BUILD_NUMBER}").withRun("--name ${CONTAINER_NAME} -p ${PORT_MAPPING}")
+                    docker.image("${DOCKER_IMAGE}:${BUILD_NUMBER}").inside("--name ${CONTAINER_NAME} -p ${PORT_MAPPING}")
                     
                 }
             }

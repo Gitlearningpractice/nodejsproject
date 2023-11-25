@@ -26,7 +26,7 @@ pipeline {
         stage('Building Docker Image') {
             steps {
                 script {
-                    sh 'cp server.js .'
+                    sh 'cp app.js .'
                    // Build the Docker image
                     docker.build("${DOCKER_IMAGE}:${BUILD_NUMBER}", '.')
                 }
